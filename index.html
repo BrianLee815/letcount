@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2083996320304959"
+     crossorigin="anonymous"></script>
+     <meta charset="UTF-8" />
+     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>글자수 세기 - 실시간 글자 수, 단어 수를 무료로 확인하는 온라인 도구</title>
+     <meta name="description" content="복사하고 붙여넣기만 하면 글자 수와 단어 수를 실시간으로 확인할 수 있는 무료 온라인 글자수 세기 도구입니다. 과제, SNS, 블로그 글 작성에 유용합니다.">
+     <meta name="keywords" content="글자수 세기, 단어 수 세기, 문자 수 세기, 온라인 글자수 도구, 글자 수 카운터, 무료 글자 수 계산기" />
+     <meta name="robots" content="index, follow" />
+     <link rel="canonical" href="https://letcount.pages.dev/" />
+     <meta name="google-site-verification" content="fdxO-0Q-dt6XJ1pQRXVKeD8_4ONRnpAJuZ9lR7U7uHs" />
+    
+     <!-- Open Graph -->
+<meta property="og:title" content="글자수 세기 - 실시간 글자 수, 단어 수 계산기">
+<meta property="og:description" content="실시간으로 글자 수와 단어 수를 쉽게 확인하세요. 무료 온라인 글자수 세기 도구입니다.">
+<meta property="og:url" content="https://letcount.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://letcount.pages.dev/og-image.png"> <!-- 썸네일 이미지 주소 설정 -->
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="글자수 세기">
+<meta name="twitter:description" content="실시간 글자 수, 단어 수, 문장 수를 확인하는 무료 도구">
+<meta name="twitter:image" content="https://letcount.pages.dev/og-image.png">
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "글자수 세기",
+      "url": "https://letcount.pages.dev",
+      "applicationCategory": "TextEditorApplication",
+      "operatingSystem": "All",
+      "description": "실시간으로 글자 수와 단어 수를 쉽게 확인하세요. SNS, 과제, 원고 작업에 유용한 무료 온라인 글자수 세기 도구입니다.",
+      "image": "https://letcount.pages.dev/og-image.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      }
+    }
+    </script>
+    
+    
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #80deea; /* 밝은 파란색 계열 */
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #4dd0e1; /* 밝은 청록색 */
+            transition: background 0.3s;
+        }
+        .menu a:hover {
+            background-color: #26c6da; /* 호버 시 색상 */
+        }
+        h2 {
+            color: #444;
+            margin-bottom: 50px;
+        }
+        textarea {
+            width: 80%;
+            height: 225px;
+            font-size: 16px;
+            line-height: 1.5;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #fff9c4;
+            resize: none;
+            display: block;
+            margin: 0 auto 30px auto;
+        }
+        .counter-container {
+            margin-top: 30px;
+        }
+        .counter {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+            background-color: #ffeb3b;
+            color: #333;
+            margin: 10px;
+        }
+        .button {
+            margin: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ff7043; /* 따뜻한 오렌지 색상 */
+            color: #fff;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #f4511e; /* 호버 시 오렌지 색상 */
+        }
+        .faq-container {
+            text-align: left;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e0f7fa;
+            border-radius: 8px;
+        }
+        .faq-question {
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .faq-answer {
+            margin-left: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="menu">
+        <a href="#" onclick="openTab('charCountTab')">글자 수 세기</a>
+        <a href="#" onclick="openTab('wordCountTab')">단어 수 세기</a>
+        <a href="#" onclick="openTab('sentenceAnalysisTab')">문장 분석기</a>
+        <a href="#" onclick="openTab('readabilityAnalysisTab')">가독성 분석기</a>
+        <a href="#" onclick="openTab('faqTab')">FAQ</a>
+    </div>
+    
+    <div id="charCountTab" class="tab-content">
+        <h1>글자 수 세기</h1>
+        <textarea id="textInput" spellcheck="false" oninput="countCharacters()" onpaste="setTimeout(countCharacters, 0)" placeholder="여기에 텍스트를 입력하세요..."></textarea>
+        <div class="counter-container">
+            <div class="counter">글자 수: <span id="charCount">0</span></div>
+            <div class="counter">빈칸 제외: <span id="charCountNoSpace">0</span></div>
+        </div>
+    </div>
+    
+    <div id="wordCountTab" class="tab-content" style="display: none;">
+        <h2>단어 수 세기</h2>
+        <textarea id="wordInput" spellcheck="false" oninput="countWords()" onpaste="setTimeout(countWords, 0)" placeholder="여기에 텍스트를 입력하세요..."></textarea>
+        <div class="counter-container">
+            <div class="counter">단어 수: <span id="wordCount">0</span></div>
+        </div>
+    </div>
+
+    <div id="sentenceAnalysisTab" class="tab-content" style="display: none;">
+        <h2>문장 분석기</h2>
+        <textarea id="sentenceInput" spellcheck="false" oninput="analyzeSentences()" placeholder="여기에 문장을 입력하세요..."></textarea>
+        <div class="counter-container">
+            <div class="counter">문장 수: <span id="sentenceCount">0</span></div>
+        </div>
+    </div>
+
+    <div id="readabilityAnalysisTab" class="tab-content" style="display: none;">
+        <h2>가독성 분석기</h2>
+        <textarea id="readabilityInput" spellcheck="false" oninput="analyzeReadability()" placeholder="여기에 텍스트를 입력하세요..."></textarea>
+        <div class="counter-container">
+            <div class="counter">가독성 점수: <span id="readabilityScore">70</span></div>
+            <div class="counter">가독성 평가: <span id="readabilityRating">보통</span></div>
+        </div>
+    </div>
+    
+    <div id="faqTab" class="tab-content" style="display: none;">
+        <h2>자주 묻는 질문 (FAQ)</h2>
+        <div class="faq-container">
+            <div class="faq-question">1. 글자 수 세기 프로그램은 어떻게 사용하나요?</div>
+            <div class="faq-answer">이 프로그램은 입력한 텍스트의 글자 수를 실시간으로 세어줍니다. 빈칸을 제외한 글자 수도 따로 확인할 수 있습니다.</div>
+
+            <div class="faq-question">2. 단어 수 세기 프로그램은 어떤 용도로 사용되나요?</div>
+            <div class="faq-answer">단어 수를 세는 프로그램으로, 텍스트에서 단어의 수를 계산해줍니다. 이 기능은 글을 작성할 때 단어 수를 확인하고 싶은 분들에게 유용합니다.</div>
+
+            <div class="faq-question">3. 문장 분석기는 무엇을 하나요?</div>
+            <div class="faq-answer">문장 분석기는 입력된 텍스트를 문장 단위로 나누어 문장의 수를 계산해줍니다. 긴 글을 작성할 때 문장 수를 확인할 수 있습니다.</div>
+
+            <div class="faq-question">4. 가독성 분석기는 어떻게 작동하나요?</div>
+            <div class="faq-answer">가독성 분석기는 텍스트의 가독성 점수를 계산해줍니다. 점수가 80점 이상이면 글의 가독성이 좋다고 평가되고, 60점 이하이면 좋지 않다고 평가됩니다.</div>
+
+            <div class="faq-question">5. 이 사이트는 무료로 사용할 수 있나요?</div>
+            <div class="faq-answer">네, 이 사이트의 모든 도구는 무료로 제공됩니다. 누구든지 자유롭게 사용할 수 있습니다.</div>
+        </div>
+    </div>
+
+    <script>
+        function countCharacters() {
+            let text = document.getElementById("textInput").value;
+            document.getElementById("charCount").textContent = text.length;
+            document.getElementById("charCountNoSpace").textContent = text.replace(/\s/g, '').length;
+        }
+        
+        function countWords() {
+            let text = document.getElementById("wordInput").value.trim();
+            let words = text.length > 0 ? text.split(/\s+/).length : 0;
+            document.getElementById("wordCount").textContent = words;
+        }
+        
+        function analyzeSentences() {
+            let text = document.getElementById("sentenceInput").value;
+            let sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+            document.getElementById("sentenceCount").textContent = sentences.length;
+        }
+
+        function analyzeReadability() {
+            let text = document.getElementById("readabilityInput").value;
+            let score = Math.random() * 100;  // 임시로 랜덤 값
+            document.getElementById("readabilityScore").textContent = score.toFixed(2);
+
+            let rating = "나쁨";
+            if (score > 60) {
+                rating = "보통";
+            }
+            if (score > 80) {
+                rating = "좋음";
+            }
+            document.getElementById("readabilityRating").textContent = rating;
+        }
+        
+        function openTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
+        }
+    </script>
+</body>
+
+<footer>
+    <div style="text-align: center; padding: 20px; background-color: #f1f1f1;">
+        <a href="privacy-policy.html" style="color: #00796b; text-decoration: none;">개인정보 보호정책</a>
+        <p>&copy; 2025 BRN. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
